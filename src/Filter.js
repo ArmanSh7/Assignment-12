@@ -19,7 +19,7 @@ class Filter extends React.Component{
     render(){
         return(
             <div>
-             <input placeholder='Search....' type="text" id="filterText" name="filterText" onChange={this.handleChange}/><br/>
+             <input className="w-50" placeholder='Search....' type="text" id="filterText" name="filterText" onChange={this.handleChange}/><br/>
             </div>);        
     };
     

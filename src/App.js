@@ -4,8 +4,7 @@ import Product from "./Product";
 
 function App() {
   return (
-    // <div className="App">
-    <div>
+    <div className="container">
       <Product message = {12}/>
     </div>
   );

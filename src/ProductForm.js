@@ -1,16 +1,5 @@
 import React from 'react';
-import {TableRows} from './TableRows'
-// let state={
-//     productName :"",
-//     productCategory :"",
-//     productPrice :"",
-//     product:{
-//       name:"",
-//       category:"",
-//       price:""
-//     },
-//     data:[]
-//   }
+
 const RESET_VALUES = {id: '', category: '', price: '', name: ''}
 class  ProductForm extends React.Component{
 
@@ -47,15 +36,15 @@ class  ProductForm extends React.Component{
     render(){
     return(
         <div>
-            <h3>Enter a new Product</h3>
+            <h3>Add a new Product</h3>
             <form >           
                 <label for="name">Name:</label><br/>
-                <input type="text" id="name" name="name" onChange={this.handleChange} value={this.state.product.name} /><br/>
+                <input className="w-25" type="text" id="name" name="name" onChange={this.handleChange} value={this.state.product.name} /><br/>
                 <label for="category">Category:</label><br/>
-                <input type="text" id="category" name="category" onChange={this.handleChange} value={this.state.product.category} /><br/>
+                <input className="w-25" type="text" id="category" name="category" onChange={this.handleChange} value={this.state.product.category} /><br/>
                 <label for="price">Price:</label><br/>
-                <input type="text" id="price" name="price" onChange={this.handleChange} value={this.state.product.price} /><br/>
-                <input type="submit" value="Submit"  onClick={this.handleSave}/>
+                <input className="w-25" type="number" id="price" name="price" onChange={this.handleChange} value={this.state.product.price} /><br/>
+                <button type="submit" className="btn btn-primary mt-2" value="Save"  onClick={this.handleSave}>Save</button>
             </form> 
             </div>
         );
@@ -63,28 +52,3 @@ class  ProductForm extends React.Component{
 }
   
   export default ProductForm;
-
-
-//   const getPrice = (event)=>{
-//     switch(event.target.name){
-//       case "name":
-//         state.product.name = event.target.value;
-//         console.log("Name is "+ state.product.name);
-//         break;
-//       case "price":
-//         state.product.price= event.target.value;
-//         console.log("Price is "+ state.product.price)
-//           break;
-//       case "category":
-//         state.product.category = event.target.value;
-//         console.log("Category is "+ state.product.category)
-//             break;
-//       default:
-//         break;
-//     }
-//   }
-  
-//   const submitRow = (event)=>{
-//     event.preventDefault();
-//     state.data.push(<TableRows  name={state.product.name} price={state.product.price}/>);
-//   }

@@ -13,11 +13,12 @@ class TableRows extends React.Component {
    
     render(){
         let {name, price} = this.props;
+        let displayPrice = price.includes("$")?price:"$"+price;
         return(
         <tr>
             <td>{name}</td>
-            <td>{price}</td>
-            <td><button onClick={this.destroy}>Delete</button></td>
+            <td>{displayPrice}</td>
+            <td><button class="btn btn-primary" onClick={this.destroy}>Delete</button></td>
         </tr>
         );
     }

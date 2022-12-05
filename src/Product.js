@@ -46,13 +46,15 @@ class Product extends React.Component{
         });
     }
 
-    handleDestroy(productId) {
+
+   handleDestroy(productId) {
         this.setState((prevState) => {
-             let products = prevState.products
-             delete products[productId]
-             return { products }
+            let products = prevState.products
+            delete products[productId]
+            return { products }
         })
-   }
+    }
+
    
 
   render(){
